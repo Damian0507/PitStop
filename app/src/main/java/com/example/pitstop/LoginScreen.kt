@@ -28,7 +28,7 @@ import com.example.pitstop.R
 import poppinsFont
 
 @Composable
-fun LoginScreen() {
+fun LoginScreen(onLoginClick: () -> Unit) {
     Box(
         modifier = Modifier
             .fillMaxSize(),
@@ -95,7 +95,7 @@ fun LoginScreen() {
             )
             {
                 Button(
-                    onClick = { /* Navighează spre HomeScreen() */ },
+                    onClick = { onLoginClick()},
                     colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFFA9411D)),
                     modifier = Modifier
                         .weight(1f)
